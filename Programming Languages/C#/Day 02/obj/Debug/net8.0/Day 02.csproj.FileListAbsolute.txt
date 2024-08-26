@@ -1,0 +1,15 @@
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.AssemblyInfoInputs.cache
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.AssemblyInfo.cs
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.csproj.CoreCompileInputs.cache
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.sourcelink.json
+F:\GitHub\C-Sharp Full Stack\Day 02\bin\Debug\net8.0\Day 02.exe
+F:\GitHub\C-Sharp Full Stack\Day 02\bin\Debug\net8.0\Day 02.deps.json
+F:\GitHub\C-Sharp Full Stack\Day 02\bin\Debug\net8.0\Day 02.runtimeconfig.json
+F:\GitHub\C-Sharp Full Stack\Day 02\bin\Debug\net8.0\Day 02.dll
+F:\GitHub\C-Sharp Full Stack\Day 02\bin\Debug\net8.0\Day 02.pdb
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.dll
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\refint\Day 02.dll
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.pdb
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\Day 02.genruntimeconfig.cache
+F:\GitHub\C-Sharp Full Stack\Day 02\obj\Debug\net8.0\ref\Day 02.dll
