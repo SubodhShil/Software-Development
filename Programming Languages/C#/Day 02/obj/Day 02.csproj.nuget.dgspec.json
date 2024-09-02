@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\GitHub\\C-Sharp Full Stack\\Day 02\\Day 02.csproj": {}
+    "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj": {}
   },
   "projects": {
-    "F:\\GitHub\\C-Sharp Full Stack\\Day 02\\Day 02.csproj": {
+    "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\GitHub\\C-Sharp Full Stack\\Day 02\\Day 02.csproj",
+        "projectUniqueName": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj",
         "projectName": "Day 02",
-        "projectPath": "F:\\GitHub\\C-Sharp Full Stack\\Day 02\\Day 02.csproj",
+        "projectPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj",
         "packagesPath": "C:\\Users\\subod\\.nuget\\packages\\",
-        "outputPath": "F:\\GitHub\\C-Sharp Full Stack\\Day 02\\obj\\",
+        "outputPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\subod\\AppData\\Roaming\\NuGet\\NuGet.Config"

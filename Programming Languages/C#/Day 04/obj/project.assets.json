@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj",
-      "projectName": "Day 02",
-      "projectPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\Day 02.csproj",
+      "projectUniqueName": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 04\\Day 04.csproj",
+      "projectName": "Day 04",
+      "projectPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 04\\Day 04.csproj",
       "packagesPath": "C:\\Users\\subod\\.nuget\\packages\\",
-      "outputPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 02\\obj\\",
+      "outputPath": "F:\\GitHub\\Software Development\\Programming Languages\\C#\\Day 04\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\subod\\AppData\\Roaming\\NuGet\\NuGet.Config"
