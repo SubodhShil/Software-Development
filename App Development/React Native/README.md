@@ -1,4 +1,4 @@
-> React Native transpiles it's all built-in components like, View, Text, Button into native OS widgets. For example, the View component transpiles into UIView (for iOS) and Android View (for Android OS)
+> React Native transpiles it's all built-in components like, View, Text, Button into native OS widgets. For example, the View component transpiled into UIView (for iOS) and Android View (for Android OS)
 
 >
 
