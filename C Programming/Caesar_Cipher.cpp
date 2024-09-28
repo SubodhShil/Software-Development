@@ -14,10 +14,8 @@ string EncryptionLogic(string text)
         for (char &ch : word)
         {
             char currentChar = toupper(ch);
-            int charValue = int(currentChar) - 65;
-            // cout << charValue << endl;
-            char encryptedChar = char(((charValue + 3) % 26) + 65);
-            // cout << encryptedChar << " ";
+            int charValue = int(currentChar) - 65;                  // Convert character to 0-25 range
+            char encryptedChar = char(((charValue + 3) % 26) + 65); // Shift by 3 and convert back to char
             resultWord += encryptedChar;
         }
 
@@ -27,7 +25,6 @@ string EncryptionLogic(string text)
     string encryptedText = "";
     for (auto str : encryptedWords)
     {
-        // cout << i << endl;
         encryptedText += str + " ";
     }
 
@@ -46,8 +43,10 @@ string DecryptionLogic(string text)
         for (char &ch : word)
         {
             char currentChar = toupper(ch);
-            int charValue = int(currentChar) - 65;
-            char decryptedChar = char((charValue - 3) % 26);
+            int charValue = int(currentChar) - 65; // Convert character to 0-25 range
+
+            // Decryption logic, ensure positive value for modulo operation
+            char decryptedChar = char(((charValue - 3 + 26) % 26) + 65); // Shift by -3, ensure positive modulo
             resultWord += decryptedChar;
         }
 
@@ -57,7 +56,6 @@ string DecryptionLogic(string text)
     string decryptedText = "";
     for (auto str : decryptedWords)
     {
-        // cout << i << endl;
         decryptedText += str + " ";
     }
 
