@@ -41,4 +41,3 @@ public class First
         Console.WriteLine(GlobalValue + " " + key);
     }
 };
-

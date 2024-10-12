@@ -12,6 +12,10 @@
 -   Methods in C# can only be called or invoked from another method such as the 'Main' method.
 -   'var' is a variable declaration keyword that can automatically determine values without any explicit value type. Variables declared with 'var' keyword can only be defined within a block scope.
 
+### Checking data type
+
+`variable_name.GetType().Name`
+
 ### `TryParse`
 
 `TryParse()` is supposed to be used on a string input to check if it can be converted to an integer. This method converts the string representation of a number.
