@@ -5,7 +5,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        primitiveTypes();
+        // primitiveTypes();
+        string_chars();
     }
 
     public static void primitiveTypes()
@@ -50,6 +51,16 @@ public class Program
 
     public static void string_chars()
     {
+        /* String to integer conversion */
+        string textNumber1 = "423423423";
+        int number1 = Convert.ToInt32(textNumber1);
+        Console.WriteLine(number1);
 
+        string textNumber2 = "-55343242323.524789";
+        double number2 = Convert.ToDouble(textNumber2);
+        Console.WriteLine(number2);
+
+        /* Formatting floating point */
+        System.Console.WriteLine($"{number2:F3}");
     }
 }
