@@ -90,3 +90,8 @@ Console.WriteLine(roundedNumber);
 ```
 553432423423423.5242
 ```
+
+Class members variable
+
+1. If a class member written without any specifier or access modifier it will implicitly treated as a 'protected' access modifier.
+2. 

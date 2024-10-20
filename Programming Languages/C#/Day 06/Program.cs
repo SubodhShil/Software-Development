@@ -6,8 +6,8 @@ public class Program
     {
         // f1();
         // f2();
-        // f3();
-        f4();
+        f3();
+        // f4();
     }
 
     public static void f1()
@@ -28,7 +28,8 @@ public class Program
 
     public static void f3()
     {
-        Human Subodh = new Human();
+        Human firstMan = new Human("Subodh", "Shil");
+        firstMan.IntroduceMySelf();
     }
 
     // Arrays
@@ -48,4 +49,5 @@ public class Program
         /// Access the second last value
         System.Console.WriteLine(numbers[^2]);
     }
+
 }
