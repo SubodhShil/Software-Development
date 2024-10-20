@@ -1,0 +1,15 @@
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\bin\Debug\net8.0\Day 06.exe
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\bin\Debug\net8.0\Day 06.deps.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\bin\Debug\net8.0\Day 06.runtimeconfig.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\bin\Debug\net8.0\Day 06.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\bin\Debug\net8.0\Day 06.pdb
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.AssemblyInfoInputs.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.AssemblyInfo.cs
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.csproj.CoreCompileInputs.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.sourcelink.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\refint\Day 06.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.pdb
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\Day 06.genruntimeconfig.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 06\obj\Debug\net8.0\ref\Day 06.dll
