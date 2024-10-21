@@ -30,6 +30,8 @@ public class Program
     {
         Human firstMan = new Human("Subodh", "Shil");
         firstMan.IntroduceMySelf();
+
+        Human secondMan = new Human();
     }
 
     // Arrays

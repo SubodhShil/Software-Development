@@ -14,9 +14,13 @@ class Human
         this.lastName = lastName;
     }
 
+    public Human()
+    {
+        System.Console.WriteLine("Are you a Human!");
+    }
+
     public void IntroduceMySelf()
     {
         System.Console.WriteLine($"Hi, I'm {firstName} {lastName}");
     }
 }
-

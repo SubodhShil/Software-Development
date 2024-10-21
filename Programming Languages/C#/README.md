@@ -94,4 +94,10 @@ Console.WriteLine(roundedNumber);
 Class members variable
 
 1. If a class member written without any specifier or access modifier it will implicitly treated as a 'protected' access modifier.
-2. 
+2.
+
+### Jagged Array
+
+### List
+
+A list is a collection of elements that can be extended or shrink. Unlike array, size of list can easily be modified without any speical drawback.
