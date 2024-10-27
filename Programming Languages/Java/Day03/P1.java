@@ -9,7 +9,8 @@ public class P1 {
         // p1();
         // p2();
         // p3();
-        p4();
+        // p4();
+        p5();
     }
 
     public static void p1() {
@@ -26,6 +27,7 @@ public class P1 {
         int[] myArray2 = { 10, 2, 33, -5, 77 };
     }
 
+    /* 1D Array */
     public static void p2() {
         System.out.print("Enter the size of the array: ");
         int size = input.nextInt();
@@ -70,10 +72,33 @@ public class P1 {
 
         System.out.println();
 
-        /* Ouput */
+        /* Output */
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
                 System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /* Jagged array */
+    public static void p5() {
+        // System.out.println();
+
+        int nums[][] = new int[3][];
+        nums[0] = new int[3];
+        nums[1] = new int[4];
+        nums[2] = new int[3];
+
+        for (int i = 0; i < nums.length; ++i) {
+            for (int j = 0; j < nums[i].length; ++j) {
+                nums[i][j] = (int) (Math.random() * 10);
+            }
+        }
+
+        for (int i[] : nums) {
+            for (int j : i) {
+                System.out.print(j + " ");
             }
             System.out.println();
         }

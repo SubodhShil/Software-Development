@@ -1,0 +1,4 @@
+-   Node js is single threaded and non-blocking
+-   Relational databases like MySQL, এগুলাকে relational বলা হয় কারণ এটা অনেকগুলো data table এর মধ্যে relation তৈরি করে ।
+-   Non-relational databases are more flexible.
+-   
