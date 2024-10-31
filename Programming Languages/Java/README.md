@@ -4,4 +4,6 @@
 -   The `new` keyword is used to create an object of a class.
 -   By default, a non-initialized integer array would automatically be allocated with value of 0.
 -   Objects are stored in the heap memory.
--   
+-   Java is always call by value. 
+-   <ins>**Java ArrayList**</ins> is the substitution for Vector in C++.
+

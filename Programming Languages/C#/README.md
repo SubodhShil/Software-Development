@@ -104,6 +104,11 @@ Collection of item with same data type and fixed in size.
 
 ### List
 
-A list is a collection of elements that can be extended or shrink. Unlike array, size of list can easily be modified without any special drawback. 
+A list is a collection of elements that can be extended or shrink. Unlike array, size of list can easily be modified without any special drawback.
 
 <ins>List is dynamic in size</ins>
+
+Types of class members
+
+1. Instance members: এই member গুলোকে access করতে হলে আগে একটি class এর instance বা object create করে তারপরে ব্যবহার করতে হবে ।
+2. Static members: এই member গুলোকে access করতে হলে class এর instance বা object create তৈরি করা লাগে না ।
