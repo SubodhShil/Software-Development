@@ -8,7 +8,6 @@
 2. What is CURL
 3. What is response header
 
-
 > POST method is used for creating something or giving/submitting data to the database. 
 
 ### Request body
