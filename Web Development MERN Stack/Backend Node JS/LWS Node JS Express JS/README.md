@@ -13,4 +13,3 @@ next() is a function that is used in middleware to pass control to the next midd
 ## Multiple HTTP request for a common route
 
 By using app.route() method this can be achieved.
-

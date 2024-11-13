@@ -6,3 +6,7 @@
 
 >        Create a context => Provide the context => Consume the context
 
+&nbsp;
+
+# **`useReducer()`**
+
