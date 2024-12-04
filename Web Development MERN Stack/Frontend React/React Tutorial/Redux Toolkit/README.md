@@ -1,5 +1,5 @@
 -   What Redux toolkit do is stores all the necessary data or state or methods in a centralized place called **"Store"**.
--   Action:
+-   Action: 
 -   State:
 -   Reducer:
 
