@@ -13,3 +13,6 @@ next() is a function that is used in middleware to pass control to the next midd
 ## Multiple HTTP request for a common route
 
 By using app.route() method this can be achieved.
+
+## Query strings: Query strings or parameters are appended to the URL after a `?` and are typically used to send non-sensitive data or optional. 
+
