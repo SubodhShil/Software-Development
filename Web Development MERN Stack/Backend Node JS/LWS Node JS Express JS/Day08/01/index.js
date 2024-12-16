@@ -12,8 +12,7 @@ let upload = multer({
     },
     fileFilter: (req, file, cb) => {
         console.log(file);
-    }, 
-
+    },
 });
 
 const app = express();
