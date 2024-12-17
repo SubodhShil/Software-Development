@@ -13,13 +13,15 @@ Important packages used in the project:
 **Command**: `npm i express mongodb cors nodemon cookie-parser morgan dotenv multer colors`
 
 1. What is middleware?  
-   👉 Which let or authorize upcoming or next functions if everything is fine.
+   👉 Which let or authorize upcoming or next functions if everything is fine. In simple terms middlewares are the next functions that are responsible for other task after the current task.
 
 2. What is the **.env** file?  
    👉 The .env file is a file that keeps all the confidential data.
 
 3. MVC pattern and folder structure for the application  
    👉 MVC refers to Model-View-Controller. An architecture that is followed by most Node JS projects.
-   The **M** refers to Models or database design, **V** refers to View or frontend or client side and **C** refers to Controller or logical part of the backend codebase. Here in the controller folder callback functions would be defined.
+   The **M** refers to Models or database design, **V** refers to View or frontend or client side and **C** refers to Controller or logical part of the backend codebase. Here in the controller folder callback functions would be defined. Here is the common folder structure
 
-4.
+    ![](20241217152906.png)
+
+4. 

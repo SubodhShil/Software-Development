@@ -4,6 +4,10 @@ const morgan = require('morgan');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+// import routes 
+const testRoutes = require('./routes/testRoutes');
+
+
 // dotenv config 
 dotenv.config();
 
@@ -18,8 +22,11 @@ app.use(express.json());
 app.use(cors());
 
 
-// Route 
-app.get('', (req, res) => {
+/* Routes */
+// Subroutes
+app.use('/api/v1', testRoutes);
+
+app.get('/', (req, res) => {
     return res.status(200).send(`<h1>Welcome guys!!</h1>`);
 });
 
@@ -28,7 +35,7 @@ app.get('', (req, res) => {
 const PORT = process.env.PORT || 5700;
 
 
-// Listen or run the server
+// Listen or run the server 
 app.listen(PORT, () => {
-    console.log('Server is running'.bgRed);
+    console.log(`Server is running on http://localhost:${PORT}`.bgRed);
 });
