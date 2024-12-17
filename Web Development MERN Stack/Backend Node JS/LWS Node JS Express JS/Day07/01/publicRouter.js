@@ -8,7 +8,6 @@ const log = (req, res, next) => {
 
 // publicRouter.all('*', log);
 
-
 publicRouter
     .route('/gallery')
     .all((req, res, next) => {
