@@ -6,10 +6,14 @@ const dotenv = require('dotenv');
 
 // import routes 
 const testRoutes = require('./routes/testRoutes');
+const connectDB = require('./configs/db');
 
 
 // dotenv config 
 dotenv.config();
+
+// database connection
+connectDB();
 
 
 // REST object 

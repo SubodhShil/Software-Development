@@ -24,4 +24,5 @@ Important packages used in the project:
 
     ![](20241217152906.png)
 
-4. 
+4. What is Schema?
+   👉
