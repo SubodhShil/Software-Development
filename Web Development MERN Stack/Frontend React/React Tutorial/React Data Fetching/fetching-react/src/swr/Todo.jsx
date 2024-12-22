@@ -24,7 +24,7 @@ export function Todo() {
         {
             suspense: true
         }
-    );
+    );  
 
     if (error) {
         return <h1>Error occurred!!</h1>;

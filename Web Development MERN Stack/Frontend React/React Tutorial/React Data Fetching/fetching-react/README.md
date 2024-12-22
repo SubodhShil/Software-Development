@@ -2,4 +2,8 @@
 
 # 2. Axios
 
-# 3. 
+# 3. SWR
+
+# 4. React Query
+
+Helps in caching.
