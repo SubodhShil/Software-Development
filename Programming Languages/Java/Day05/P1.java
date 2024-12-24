@@ -27,8 +27,4 @@ public class P1 {
         myName.insert(7, "Chandra");
         System.out.println(myName);
     }
-
-    public static void f3() {
-        
-    }
 }

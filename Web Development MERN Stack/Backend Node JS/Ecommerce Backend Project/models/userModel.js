@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { unsubscribe } = require('../routes/testRoutes');
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -52,4 +51,5 @@ const userSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-module.exports = userSchema;
+const userModel = mongoose.model("Users", userSchema);
+export default userModel;
