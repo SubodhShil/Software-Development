@@ -31,14 +31,17 @@ const homeMiddleware = (req, res, next) => {
     next();
 };
 
-
 app.get('/', homeMiddleware, (req, res) => {
     res.render('index');
 });
 
 
-const PORT = process.env.PORT || 5700;
+app.post('/get-form-data', (req, res, next) => {
+    console.log(req.body);
+    res.send('Data received');
+});
 
+const PORT = process.env.PORT || 5300;
 
 app.listen(PORT, () => {
     console.log(`Running at port http://localhost:${PORT}`);
