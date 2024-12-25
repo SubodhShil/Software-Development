@@ -155,3 +155,26 @@ export {moduleA,moduleB,moduleC};
 3. U = Update
 4. D = Delete
 
+## **``Middleware``**
+
+- Middleware এমন একটা logic যেটা request response cycle এর মাঝে থাকে । 
+- প্রতিবার কোন route hit করতে হলে সেটা একটা middleware হয়ে যায় ।
+- Middleware sits between application logic and the server. **Bridge between client and server.** 
+- Middleware is an interceptor between request and response cycle. Why do we require an interceptor? Since not every request is valid and an application could have it's own way to handle or specific criteria to handle or process the request then proceed to the response. 
+- In Express JS middleware holds the access of request and response. If particular request failed it will not proceed to the next task. 
+- Middleware deals with various task such as:
+  - Request response process
+  - Authentication and Authorization
+  - Logging and Monitoring
+  - CORS Handling
+  - Error Handling
+  - Session Management
+- Express middleware maintains top-down approach that means they will execute one after another. Unless the current middleware get successfully executed it will not go to the next one. 
+- Usually middlewares in express don't send response.
+
+### 3rd party middleware 
+
+**`Morgan`**
+
+A HTTP request logger middleware for Node.js. It logs details about incoming requests to your server.
+
