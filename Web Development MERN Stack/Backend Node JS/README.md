@@ -181,10 +181,43 @@ export { moduleA, moduleB, moduleC };
 
 A HTTP request logger middleware for Node.js. It logs details about incoming requests to your server.
 
-> # Notes:
+> ## **`Notes`**
 
 1. Post method দিয়ে কোন ডাটা পাঠানো হলে সেটা body object এর মধ্যে আসে । আর data দেখতে হলে req.body দিয়ে দেখতে হবে ।
 
 2. By default HTML form methods are in 'GET' method, to submit to the server we've to change it to the POST method.
 
-3. req.body থেকে কোন 
+3. req.body থেকে কোন data দেখতে হলে অবশ্যই নিচের দুটি express middleware add করতে হবে
+
+    ```cpp
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+    ```
+
+4. Static files are the non-credential files rendered directly to the client's browser that don't required any server-side processing. These files are typically the frontend related files (like HTML, CSS, JS, Images, etc). Direct access, no authentication or restriction. To use static file add the following code:
+
+    ```cpp
+    app.use(express.static("public"));
+    ```
+
+> ## **`MongoDB`**
+
+1. **SQL** - Data stored in tabular format.
+2. **NoSQL** - Not Only SQL, stores data in object format.
+
+### NoSQL terminologies
+
+Backend contains two parts, these are:
+
+-   **Application server**: Where all logic of the backend is written. Handle routes, accepts request.
+-   **Database server**: Where all the data are stored.
+
+Collections, documents, schemas, keys, models
+
+1. **Cluster**: A place in mongodb where many database are saved.
+2. **Database**: Where data of a specific project is saved.
+3. **Collections**: Collections are just like tables in relational databases, they also store data, but in the form of documents. MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A collection can have multiple documents.
+4. **Documents**: The format or style of the data that is consumed by mongodb collections. Documents are a data structure composed of field and value pairs just like JSON objects.
+5. **Schema**: It's a structure that tells how your document should look like. By default NoSQL like mongodb are schemaless, they are developed to be schema flexible. But as project grows our database should maintain a strict structure thus tools like Mongoose comes into picture providing a schema to NoSQL databases like mongodb. **Mongoose schemas are how you tell Mongoose what your documents look like.**
+
+    ![](20241228080832.png)
