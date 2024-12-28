@@ -221,3 +221,9 @@ Collections, documents, schemas, keys, models
 5. **Schema**: It's a structure that tells how your document should look like. By default NoSQL like mongodb are schemaless, they are developed to be schema flexible. But as project grows our database should maintain a strict structure thus tools like Mongoose comes into picture providing a schema to NoSQL databases like mongodb. **Mongoose schemas are how you tell Mongoose what your documents look like.**
 
     ![](20241228080832.png)
+
+
+-   Mongoose is a **ODM(Object Document Mapping)**
+
+
+
