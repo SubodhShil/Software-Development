@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Submission</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-full h-full bg-zinc-900 text-white p-10">
+
+            <!-- links for switch between routes -->
+            <div class="nav mb-10">
+                <a href="/read" class="text-blue-400 underline">Read</a>
+                <span>/</span>
+            </div>
+
+            <form action="/update/<%= user._id %>" method="post">
+                <h3 class="mb-3 text-2xl">Update User</h3>
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="name"
+                    name="name"
+                    value="<%= user.name %>"
+                />
+
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="email"
+                    name="email"
+                    value="<%= user.email %>"
+                />
+
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="image-url"
+                    name="image"
+                    value="<%= user.image %>"
+                />
+
+                <input
+                    type="submit"
+                    value="Update"
+                    class="px-5 py-2.5 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg hover:cursor-pointer"
+                />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Submission</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-full h-full bg-zinc-900 text-white p-10">
+            <h1 class="text-3xl text-center pt-2">Form Submission</h1>
+
+            <!-- links for switch between routes -->
+            <div class="nav mb-10">
+                <a href="/read" class="text-blue-400 underline">Go to Read</a>
+                <span>/</span>
+            </div>
+
+            <form action="/create" method="post">
+                <h3 class="mb-3 text-2xl">Create User</h3>
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="name"
+                    name="name"
+                />
+
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="email"
+                    name="email"
+                />
+
+                <input
+                    class="px-5 py-2 border-2 bg-transparent outline-blue-400 border-green-800 rounded-lg"
+                    type="text"
+                    placeholder="image-url"
+                    name="image"
+                />
+
+                <input
+                    type="submit"
+                    value="Submit"
+                    class="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-600 text-black rounded-lg hover:cursor-pointer"
+                />
+            </form>
+        </div>
+    </body>
+</html>

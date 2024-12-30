@@ -194,7 +194,7 @@ A HTTP request logger middleware for Node.js. It logs details about incoming req
     app.use(express.urlencoded({ extended: true }));
     ```
 
-4. Static files are the non-credential files rendered directly to the client's browser that don't required any server-side processing. These files are typically the frontend related files (like HTML, CSS, JS, Images, etc). Direct access, no authentication or restriction. To use static file add the following code:
+4. Static files are the non-credential files rendered directly to the client's browser that don't required any server-side processing. These files are typically the frontend related files (like HTML, CSS, JS, Images, etc). Direct access, authentication or restriction are not required. To use static file add the following code:
 
     ```cpp
     app.use(express.static("public"));
