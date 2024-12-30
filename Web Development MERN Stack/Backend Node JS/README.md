@@ -222,8 +222,12 @@ Collections, documents, schemas, keys, models
 
     ![](20241228080832.png)
 
-
 -   Mongoose is a **ODM(Object Document Mapping)**
 
+&nbsp;
 
+> # **`Authentication and Authorization`**
 
+1. **Authentication**: Validate authenticity of an user, if user's credentials belong to the database data.
+
+2. **Authorization**: The right or permissions that are available for an authenticated user.
