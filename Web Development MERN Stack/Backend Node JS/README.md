@@ -163,6 +163,7 @@ export { moduleA, moduleB, moduleC };
 -   Middleware এমন একটা logic যেটা request response cycle এর মাঝে থাকে ।
 -   প্রতিবার কোন route hit করতে হলে সেটা একটা middleware হয়ে যায় ।
 -   Middleware sits between application logic and the server. **Bridge between client and server.**
+-   একটি middleware এর কাজ শেষ হলে সে next middleware কে hit করবে আর কোন middleware না থাকলে server কে request পাঠিয়ে দিবে ।  
 -   Middleware is an interceptor between request and response cycle. Why do we require an interceptor? Since not every request is valid and an application could have it's own way to handle or specific criteria to handle or process the request then proceed to the response.
 -   In Express JS middleware holds the access of request and response. If particular request failed it will not proceed to the next task.
 -   Middleware deals with various task such as:
@@ -231,3 +232,38 @@ Collections, documents, schemas, keys, models
 1. **Authentication**: Validate authenticity of an user, if user's credentials belong to the database data.
 
 2. **Authorization**: The right or permissions that are available for an authenticated user.
+
+> ## **`JWT`**
+
+![](20250101131555.png)
+
+
+### **Typical Workflow with Both**
+
+1. **User Registration**:
+   - Use `bcrypt` to hash the user's password before saving it to the database.
+
+   ```javascript
+   const hashedPassword = await bcrypt.hash(plaintextPassword, saltRounds);
+   ```
+
+2. **User Login**:
+   - Verify the password using `bcrypt.compare` and, if valid, generate a `JWT` for the session.
+
+   ```javascript
+   if (await bcrypt.compare(plaintextPassword, hashedPassword)) {
+       const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
+   }
+   ```
+
+3. **Authenticated Requests**:
+   - Validate the `JWT` sent by the client to verify the user's identity.
+
+   ```javascript
+   const decoded = jwt.verify(token, secretKey);
+   ```
+
+### Notes 
+
+- **bcrypt** is for securing sensitive data (e.g., passwords).
+- **JWT** is for securely transmitting user identity or claims between parties (e.g., server and client). 
