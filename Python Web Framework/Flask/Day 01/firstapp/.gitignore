@@ -1,0 +1,40 @@
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Environment variables
+*.env
+.env.*
+
+# Database files
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Static and compiled files
+staticfiles/
+
+# Test coverage
+htmlcov/
+*.cover
+.coverage
+*.py,cover
+.hypothesis/
+
+# Node.js
+node_modules/
