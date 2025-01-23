@@ -7,3 +7,11 @@
 -   Java is always call by value. 
 -   <ins>**Java ArrayList**</ins> is the substitution for Vector in C++.
 
+### Literals
+
+Literals are the strict values assigned to a variable. 
+
+- There can only one public class in a java program file. 
+
+
+
