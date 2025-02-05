@@ -1,9 +1,9 @@
 ## MVT
 
-Model View Template (MVT Pattern)
+Model View Template (MVT Pattern) 
 
 1. Views: Contains various methods. Handles all logics.
-2. Model: Database.
+2. Model: Database and database design.
 3. Template: Frontend or client side.
 
 ## Virtual environment
@@ -26,8 +26,8 @@ A dedicated and isolated place for creating a project, where the packages don't 
 
 ## Asynchronous: Multiple works can be done together.
 
-> **A django project contains smaller and manageable parts called applications.**
+> **A django project contains smaller and manageable parts call applications.**
 
 -   App folder এর মধ্যে urls.py file থাকে না ।
 -   একটা app বানানোর পর সবসময় app এর নাম project folder এর settings.py এর INSTALLED_APPS এর মধ্যে লিখতে হবে ।
--
+- 
