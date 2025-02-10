@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function LoginPage() {
     return (
         <div className="mt-4 flex items-center justify-around h-screen">
-            <div className="flex flex-col justify-center items-center min-w-[55%]">
+            <div className="flex flex-col justify-center items-center lg:min-w-[25%] md:min-w-[50%]">
                 <h1 className="text-4xl text-center font-bold mb-3">Login</h1>
 
                 {/* Login form */}
@@ -25,7 +25,10 @@ function LoginPage() {
                         </button>
                         <div className="text-center mt-3">
                             Don't have an account?{" "}
-                            <Link className="underline font-bold" to="/register">
+                            <Link
+                                className="underline font-bold"
+                                to="/register"
+                            >
                                 Register Account
                             </Link>{" "}
                         </div>

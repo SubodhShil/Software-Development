@@ -7,7 +7,7 @@ function Header() {
             {/* Header */}
             <header className="flex justify-between">
                 {/* icon and company name */}
-                <a href="" className="flex items-center gap-2">
+                <Link to={"/"} className="flex items-center gap-2">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -24,7 +24,7 @@ function Header() {
                     </svg>
 
                     <span className="text-2xl font-bold">airbnb</span>
-                </a>
+                </Link>
 
                 {/* Header Search bar */}
                 <div className="flex items-center gap-2 border border-gray-300 p-2 rounded-full shadow-md shadow-gray-300">
