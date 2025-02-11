@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+    // const 
+
     return (
         <div className="mt-4 flex items-center justify-around h-screen">
             <div className="flex flex-col justify-center items-center lg:min-w-[25%] md:min-w-[50%]">

@@ -267,3 +267,7 @@ Collections, documents, schemas, keys, models
 
 - **bcrypt** is for securing sensitive data (e.g., passwords).
 - **JWT** is for securely transmitting user identity or claims between parties (e.g., server and client). 
+
+### MongoDB SSL/TLS error 
+
+

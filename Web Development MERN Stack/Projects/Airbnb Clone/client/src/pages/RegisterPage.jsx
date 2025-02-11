@@ -9,11 +9,21 @@ function RegisterPage() {
 
     const registerUser = (e) => {
         e.preventDefault();
-        axios.post("/register", {
-            name,
-            email,
-            password
-        });
+
+        try {
+            axios.post("/register", {
+                name,
+                email,
+                password
+            });
+
+            // Clear the input fields after successful registration
+            setName("");
+            setEmail("");
+            setPassword("");
+        } catch (err) {
+            alert("Register failed: " + err.message);
+        }
     };
 
     return (
