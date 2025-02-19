@@ -163,7 +163,7 @@ export { moduleA, moduleB, moduleC };
 -   Middleware এমন একটা logic যেটা request response cycle এর মাঝে থাকে ।
 -   প্রতিবার কোন route hit করতে হলে সেটা একটা middleware হয়ে যায় ।
 -   Middleware sits between application logic and the server. **Bridge between client and server.**
--   একটি middleware এর কাজ শেষ হলে সে next middleware কে hit করবে আর কোন middleware না থাকলে server কে request পাঠিয়ে দিবে ।  
+-   একটি middleware এর কাজ শেষ হলে সে next middleware কে hit করবে আর কোন middleware না থাকলে server কে request পাঠিয়ে দিবে ।
 -   Middleware is an interceptor between request and response cycle. Why do we require an interceptor? Since not every request is valid and an application could have it's own way to handle or specific criteria to handle or process the request then proceed to the response.
 -   In Express JS middleware holds the access of request and response. If particular request failed it will not proceed to the next task.
 -   Middleware deals with various task such as:
@@ -237,37 +237,45 @@ Collections, documents, schemas, keys, models
 
 ![](20250101131555.png)
 
-
 ### **Typical Workflow with Both**
 
 1. **User Registration**:
-   - Use `bcrypt` to hash the user's password before saving it to the database.
 
-   ```javascript
-   const hashedPassword = await bcrypt.hash(plaintextPassword, saltRounds);
-   ```
+    - Use `bcrypt` to hash the user's password before saving it to the database.
+
+    ```javascript
+    const hashedPassword = await bcrypt.hash(plaintextPassword, saltRounds);
+    ```
 
 2. **User Login**:
-   - Verify the password using `bcrypt.compare` and, if valid, generate a `JWT` for the session.
 
-   ```javascript
-   if (await bcrypt.compare(plaintextPassword, hashedPassword)) {
-       const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
-   }
-   ```
+    - Verify the password using `bcrypt.compare` and, if valid, generate a `JWT` for the session.
+
+    ```javascript
+    if (await bcrypt.compare(plaintextPassword, hashedPassword)) {
+        const token = jwt.sign({ userId: user._id }, secretKey, {
+            expiresIn: "1h"
+        });
+    }
+    ```
 
 3. **Authenticated Requests**:
-   - Validate the `JWT` sent by the client to verify the user's identity.
 
-   ```javascript
-   const decoded = jwt.verify(token, secretKey);
-   ```
+    - Validate the `JWT` sent by the client to verify the user's identity.
 
-### Notes 
+    ```javascript
+    const decoded = jwt.verify(token, secretKey);
+    ```
 
-- **bcrypt** is for securing sensitive data (e.g., passwords).
-- **JWT** is for securely transmitting user identity or claims between parties (e.g., server and client). 
+### Notes
 
-### MongoDB SSL/TLS error 
+-   **bcrypt** is for securing sensitive data (e.g., passwords).
+-   **JWT** is for securely transmitting user identity or claims between parties (e.g., server and client).
 
+### MongoDB SSL/TLS error
 
+Run the command: `curl -4 ifconfig.me`, this will return an ip address. Add the ip address to the mongodb.
+
+## CORS error
+
+It happens when frontend and backend don't communicate with each other due to security issues.

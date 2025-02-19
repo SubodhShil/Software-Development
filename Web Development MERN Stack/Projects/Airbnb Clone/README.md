@@ -1,3 +1,3 @@
-## CORS error
+## Glimpse of the project
 
-It happens when frontend and backend don't communicate with each other due to security issues.
+![](g1.png)
