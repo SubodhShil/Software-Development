@@ -279,3 +279,11 @@ Run the command: `curl -4 ifconfig.me`, this will return an ip address. Add the 
 ## CORS error
 
 It happens when frontend and backend don't communicate with each other due to security issues.
+
+## Rate Limiter
+
+A rate limiter controls the maximum number of requests a user can make to an application within a given timeframe. This helps applications avoid being overwhelmed by excessive traffic and thus prevents server outages. Beyond simply setting a request threshold, rate limiting also ensures reliability and protects against Distributed Denial of Service (DDoS) attacks, which often leverage a massive volume of requests to cripple a service. Libraries like `express-rate-limit` in Node.js can be used to implement rate limiting.
+
+## Middleware
+
+Middleware is a function that executes during the request-response cycle, essentially acting as an intermediary between the application's core logic and the server. Middleware is responsible for validating incoming requests. If a particular request fails validation, the middleware can prevent it from proceeding to the next stage of processing. Express middleware follows a top-down execution order; they run sequentially. A subsequent middleware will not execute until the current middleware completes successfully.
