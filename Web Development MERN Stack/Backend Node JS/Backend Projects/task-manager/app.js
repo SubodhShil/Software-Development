@@ -3,18 +3,22 @@ const tasks = require('./routes/tasks');
 const app = express();
 
 
+app.use(express.json());
 app.use('api/v1/tasks', tasks);
+
 
 // routes
 app.get('/api/v1/');
 app.post('/api/v1/');
 app.get('/api/v1/');
 
+
 app.get('/', (req, res) => {
     res.status(200).send("Welcome to home page");
 });
 
 
+// task route 
 app.use('/api/v1/tasks', tasks);
 
 

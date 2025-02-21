@@ -287,3 +287,4 @@ A rate limiter controls the maximum number of requests a user can make to an app
 ## Middleware
 
 Middleware is a function that executes during the request-response cycle, essentially acting as an intermediary between the application's core logic and the server. Middleware is responsible for validating incoming requests. If a particular request fails validation, the middleware can prevent it from proceeding to the next stage of processing. Express middleware follows a top-down execution order; they run sequentially. A subsequent middleware will not execute until the current middleware completes successfully.
+
