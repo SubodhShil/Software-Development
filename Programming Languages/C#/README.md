@@ -112,3 +112,7 @@ Types of class members
 
 1. Instance members: এই member গুলোকে access করতে হলে আগে একটি class এর instance বা object create করে তারপরে ব্যবহার করতে হবে ।
 2. Static members: এই member গুলোকে access করতে হলে class এর instance বা object create তৈরি করা লাগে না ।
+
+✔️ Variables must be declared before use.  
+✔️ Methods can be used before declaration in the same class.  
+✔️ Methods from another class must be explicitly referenced.

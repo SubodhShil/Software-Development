@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Phudu:wght@300..900&family=Play:wght@400;700&family=Playwrite+DE+Grund:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap");
+* {
+    font-family: "Sofia Sans" !important;
+}
+
+/* button  */
+a.elementor-button.elementor-button-link.elementor-size-md {
+    background-color: #ed7a00 !important;
+    color: #ffffff !important;
+    border: 2px solid #fffded !important;
+    border-radius: 15px;
+    box-shadow: 7px 4px 0px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 25px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+a.elementor-button.elementor-button-link.elementor-size-md:hover {
+    color: black !important;
+    border-color: #ff5252 !important;
+    background-color: #fffded !important;
+    box-shadow: 7px 4px 10px 0px #ff5252 !important;
+    font-weight: bolder;
+}
+
+.hfe-nav-menu .hfe-menu-item {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.hfe-nav-menu .elementor-button {
+    font-size: 20px !important;
+}
+
+/* Edit the full section */
+.elementor-section.elementor-element-d490686 {
+    background-color: #f8f8f8; /* Change background color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Edit the image */
+.elementor-element-fa93930 img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Edit the title (Classic Burger) */
+.elementor-element-804c0c5 h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Edit the description */
+.elementor-element-c16ae60 .elementor-heading-title {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Edit the price details */
+.elementor-element-2ea158a h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Edit the Order Now button */
+.elementor-element-5ad7a34 .elementor-button {
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover effect for the button */
+.elementor-element-5ad7a34 .elementor-button:hover {
+    background-color: #cc5500;
+}

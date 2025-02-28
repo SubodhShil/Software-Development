@@ -27,3 +27,18 @@ F:\GitHub\C# .NET Full Stack\Day 01\obj\Debug\net8.0\refint\Day 01.dll
 F:\GitHub\C# .NET Full Stack\Day 01\obj\Debug\net8.0\Day 01.pdb
 F:\GitHub\C# .NET Full Stack\Day 01\obj\Debug\net8.0\Day 01.genruntimeconfig.cache
 F:\GitHub\C# .NET Full Stack\Day 01\obj\Debug\net8.0\ref\Day 01.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.AssemblyInfoInputs.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.AssemblyInfo.cs
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.csproj.CoreCompileInputs.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.sourcelink.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\refint\Day 01.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.pdb
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\bin\Debug\net8.0\Day 01.exe
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\bin\Debug\net8.0\Day 01.deps.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\bin\Debug\net8.0\Day 01.runtimeconfig.json
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\bin\Debug\net8.0\Day 01.dll
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\bin\Debug\net8.0\Day 01.pdb
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\Day 01.genruntimeconfig.cache
+F:\GitHub\Software Development\Programming Languages\C#\Day 01\obj\Debug\net8.0\ref\Day 01.dll
