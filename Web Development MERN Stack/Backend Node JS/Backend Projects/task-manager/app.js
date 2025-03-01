@@ -17,7 +17,7 @@ app.use('/api/v1/tasks', tasks);
 
 
 app.get('/hello', (req, res) => {
-
+    res.status(200).send("OK");
 });
 
 
