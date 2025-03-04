@@ -1,14 +1,20 @@
 const express = require('express');
 const tasks = require('./routes/tasks');
+const connectDB = require('./db/connect');
+require('dotenv').config();
+
 const app = express();
 
-
+// Middleware 
 app.use(express.json());
-app.use('api/v1/tasks', tasks);
 
 
 app.get('/', (req, res) => {
     res.status(200).send("Welcome to home page");
+});
+
+app.get('/hello', (req, res) => {
+    res.status(200).send("OK");
 });
 
 
@@ -16,12 +22,18 @@ app.get('/', (req, res) => {
 app.use('/api/v1/tasks', tasks);
 
 
-app.get('/hello', (req, res) => {
-    res.status(200).send("OK");
-});
+const PORT = process.env.PORT || 3000;
 
+const startDB = async () => {
+    try {
+        await connectDB();
+        app.listen(PORT, (req, res) => {
+            console.log(`Running on: localhost:${PORT}`);
+        });
+    }
+    catch (err) {
+        console.log(`An error occurred while connecting\n${err}`);
+    }
+};
 
-const PORT = 3000;
-app.listen(PORT, (req, res) => {
-    console.log(`Running on: localhost:${PORT}`);
-}); 
+startDB();
