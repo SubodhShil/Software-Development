@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware 
+// Middleware
 app.use(express.json());
 
 
@@ -18,7 +18,7 @@ app.get('/hello', (req, res) => {
 });
 
 
-// task route 
+// task route
 app.use('/api/v1/tasks', tasks);
 
 
