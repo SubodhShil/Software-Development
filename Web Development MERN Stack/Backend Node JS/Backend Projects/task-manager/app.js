@@ -8,9 +8,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+// template engine 
+app.set('view engine', 'ejs');
+
 
 app.get('/', (req, res) => {
-    res.status(200).send("Welcome to home page");
+    res.render('index');
+    // res.status(200).send("Welcome to home page");
 });
 
 app.get('/hello', (req, res) => {

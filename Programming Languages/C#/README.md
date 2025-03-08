@@ -116,3 +116,96 @@ Types of class members
 ✔️ Variables must be declared before use.  
 ✔️ Methods can be used before declaration in the same class.  
 ✔️ Methods from another class must be explicitly referenced.
+
+
+## 1. **Equality Check: `==` vs. `Equals()`**
+
+### `==` (Equality Operator)
+
+-   The **`==` operator** is used to compare two values, but **its behavior depends on the type being compared**.
+    -   For **value types** (like `int`, `double`, etc.), `==` compares the values.
+    -   For **reference types** (like objects, arrays, and strings), `==` compares **references** (whether both variables point to the same memory location).
+
+### `Equals()` (Method)
+
+-   The **`Equals()` method** is defined by the **`Object` class** and can be overridden by derived classes to define custom comparison logic. This allows more control over how equality is determined.
+    -   For **value types**, `Equals()` also compares values.
+    -   For **reference types**, `Equals()` checks for **value equality** (content comparison) instead of reference equality (memory location).
+
+### Example:
+
+For **strings**, `==` checks **value equality**, and `Equals()` does the same. However, `Equals()` is more flexible, as you can override it in custom classes.
+
+```csharp
+string str1 = "hello";
+string str2 = "hello";
+
+Console.WriteLine(str1 == str2); // True (value comparison for strings)
+Console.WriteLine(str1.Equals(str2)); // True (same result as == for strings)
+```
+
+For **custom objects**, `Equals()` can be overridden to check whether two objects are considered equal based on their values:
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is Person other)
+        {
+            return Name == other.Name; // Compare based on name
+        }
+        return false;
+    }
+}
+```
+
+### Why Do We Need `Equals()`?
+
+-   **Custom logic:** `Equals()` allows you to define custom equality comparisons for your own types (e.g., comparing based on values, not just memory location).
+-   **Reference types:** `Equals()` is helpful to check the content equality of reference types when `==` checks memory references.
+
+## 2. **Concatenation: `+` vs. `Concat()`**
+
+### `+` (String Concatenation)
+
+-   The `+` operator is the most common way to concatenate strings. It’s simple and works well for basic concatenation.
+
+### `Concat()` (Method)
+
+-   `String.Concat()` is a **method in the `String` class** designed for concatenating multiple strings efficiently.
+-   Internally, `Concat()` avoids creating temporary string objects (which happens when you use `+` repeatedly), making it **more efficient** in scenarios with multiple concatenations, especially in loops or when dealing with large strings.
+
+### Example:
+
+```csharp
+string firstName = "John";
+string lastName = "Doe";
+
+// Using + operator
+string fullName = firstName + " " + lastName;
+
+// Using String.Concat()
+string fullName2 = string.Concat(firstName, " ", lastName);
+
+Console.WriteLine(fullName); // John Doe
+Console.WriteLine(fullName2); // John Doe
+```
+
+### Why Do We Need `Concat()`?
+
+-   **Performance:** When concatenating many strings, `Concat()` is generally more efficient than `+`, because it avoids unnecessary intermediate string allocations.
+-   **Multiple arguments:** `Concat()` can take multiple strings at once, whereas with `+`, you need to chain multiple `+` operations.
+
+### Key Points:
+
+-   **Use `==`** for value comparisons, and **`Equals()`** when you need custom or specialized equality logic.
+-   **Use `+`** for simple concatenation, but consider **`String.Concat()`** when performance matters or when concatenating many strings at once.
+
+### Summary:
+
+-   **`==`** checks for reference equality in reference types and value equality in value types, while **`Equals()`** is more flexible, allowing for custom logic in object comparison.
+-   **`+`** is great for simple concatenations, but **`String.Concat()`** is more efficient for performance-sensitive code (e.g., multiple concatenations).
+

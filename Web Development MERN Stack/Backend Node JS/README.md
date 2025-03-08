@@ -47,23 +47,23 @@ To create an Express.js project, follow these steps:
      **(4.1)** Go to package.json file  
      **(4.2)** You'll see this object:
 
-        ```
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1"
-        }
-        ```
+```
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+}
+```
 
-        **(4.3)** Replace above code with this:
+**(4.3)** Replace above code with this:
 
-        ```
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1",
-            "start": "nodemon index.js"
-        },
-        ```
+```
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+},
+```
 
-        The line "start": "nodemon index.js" will let you replace long command **nodemon index.js** with
-        ```npm start```
+The line "start": "nodemon index.js" will let you replace long command **nodemon index.js** with
+```npm start```
 
 ## **🤔 What is Port?**
 
