@@ -5,7 +5,8 @@ public class Program
     public static void Main(string[] args)
     {
         // f1();
-        f2();
+        // f2();
+        f3();
     }
 
     // string formatting
@@ -48,13 +49,25 @@ public class Program
         {
             System.Console.WriteLine("This is equal");
         }
+        else
+        {
+            System.Console.WriteLine("Not equal");
+        }
 
         // string concat
         string c = string.Concat(a, " and ", b, 3, " How are you?");
         System.Console.WriteLine(c);
     }
 
-    public static void f3() {
-        
+    // A cool string effect using Thread.Sleep()
+    public static void f3()
+    {
+        string text = "I love the universe";
+
+        foreach (char character in text)
+        {
+            System.Console.Write(character);
+            System.Threading.Thread.Sleep(500); // shows next character after 500 ms or .5 sec
+        }
     }
 }
