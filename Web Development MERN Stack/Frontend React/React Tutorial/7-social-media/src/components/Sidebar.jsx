@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-function Sidebar({ selectedTab }) {
+function Sidebar({ selectedTab, setSelectedTab }) {
     return (
         <div className="sidebar">
             <div
@@ -24,10 +24,15 @@ function Sidebar({ selectedTab }) {
                 </a>
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
-                    <li className="nav-item">
+                    <li
+                        onClick={() => setSelectedTab("Home")}
+                        className="nav-item"
+                    >
                         <a
                             href="#"
-                            className="nav-link active"
+                            className={`nav-link ${
+                                selectedTab === "Home" && "active"
+                            } text-white`}
                             aria-current="page"
                         >
                             <svg
@@ -41,8 +46,14 @@ function Sidebar({ selectedTab }) {
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a href="#" className="nav-link text-white">
+
+                    <li onClick={() => setSelectedTab("Create Post")}>
+                        <a
+                            href="#"
+                            className={`nav-link ${
+                                selectedTab === "Create Post" && "active"
+                            } text-white`}
+                        >
                             <svg
                                 className="bi pe-none me-2"
                                 width="16"

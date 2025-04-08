@@ -13,7 +13,11 @@ function App() {
 
     return (
         <div className="app-container">
-            <Sidebar selectedTab={selectedTab} className="sidebar" />
+            <Sidebar
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+                className="sidebar"
+            />
             <div className="content flex-grow-1 d-flex flex-column">
                 <Header />
                 <Footer className="mt-auto" />
