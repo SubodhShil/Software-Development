@@ -18,11 +18,10 @@ export default function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate splash screen / loading screen
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Show splash screen for 2 seconds
+    }, 2000);
   }, []);
 
   // Request permissions for camera and media library
@@ -40,7 +39,6 @@ export default function App() {
     return true;
   };
 
-  // Handle taking a photo with the camera
   const takePhoto = async () => {
     const hasPermission = await requestPermissions();
     if (!hasPermission) return;
@@ -91,8 +89,6 @@ export default function App() {
         {
           text: 'Continue',
           onPress: () => {
-            // This is where you would send the images to your backend
-            // For now we'll just show a confirmation
             Alert.alert('Success', 'Images would be sent to backend for processing');
           }
         }
@@ -107,7 +103,7 @@ export default function App() {
     setImages(newImages);
   };
 
-  // Render splash/loading screen
+  // Initial loading screen
   if (isLoading) {
     return (
       <View style={styles.splashContainer}>
@@ -119,7 +115,7 @@ export default function App() {
     );
   }
 
-  // Render main app
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#4a90e2" />
