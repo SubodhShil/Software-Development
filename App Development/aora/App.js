@@ -15,6 +15,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { Ionicons } from '@expo/vector-icons';
 import AuthScreen from './AuthScreen';
 import FeaturesScreen from './FeaturesScreen';
+import MultiModalChat from './MultiModalChat'; // Import the new component
 
 export default function App() {
   // App state management
@@ -213,37 +214,45 @@ export default function App() {
   }
 
   // Feature-specific screens
-  // Currently only implementing Image-to-Text (OCR)
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#4a90e2" />
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} onPress={handleBackToFeatures}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>
-          {currentFeature === 'ocr' ? 'Image to Text' :
-            currentFeature === 'rephrase' ? 'Rephrase Text' :
-              currentFeature === 'ielts' ? 'IELTS Assistant' :
-                currentFeature === 'multi-query' ? 'Multi-Model Query' :
-                  currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Aora'}
-        </Text>
-        {isAuthenticated && userProfile && (
-          <TouchableOpacity style={styles.profileButton} onPress={handleSignOut}>
-            {userProfile.photoUrl ? (
-              <Image
-                source={{ uri: userProfile.photoUrl }}
-                style={styles.profileImage}
-              />
-            ) : (
-              <Ionicons name="person-circle" size={32} color="white" />
-            )}
-          </TouchableOpacity>
-        )}
-      </View>
 
-      {/* Feature-specific content (currently only showing OCR) */}
-      {currentFeature === 'ocr' && (
+      {/* Only show the header for features other than multi-query */}
+      {currentFeature !== 'multi-query' && (
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} onPress={handleBackToFeatures}>
+            <Ionicons name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+          <Text style={styles.headerText}>
+            {currentFeature === 'ocr' ? 'Image to Text' :
+              currentFeature === 'rephrase' ? 'Rephrase Text' :
+                currentFeature === 'ielts' ? 'IELTS Assistant' :
+                  currentFeature === 'multi-query' ? 'Multi-Model Query' :
+                    currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Aora'}
+          </Text>
+          {isAuthenticated && userProfile && (
+            <TouchableOpacity style={styles.profileButton} onPress={handleSignOut}>
+              {userProfile.photoUrl ? (
+                <Image
+                  source={{ uri: userProfile.photoUrl }}
+                  style={styles.profileImage}
+                />
+              ) : (
+                <Ionicons name="person-circle" size={32} color="white" />
+              )}
+            </TouchableOpacity>
+          )}
+        </View>
+      )}
+
+      {/* Show MultiModalChat component for multi-query feature */}
+      {currentFeature === 'multi-query' ? (
+        <MultiModalChat
+          onBackToFeatures={handleBackToFeatures}
+          navigation={{ navigate: () => { } }} // Pass empty navigation if not using react-navigation
+        />
+      ) : currentFeature === 'ocr' ? (
         <>
           {images.length === 0 ? (
             <View style={styles.emptyContainer}>
@@ -289,17 +298,14 @@ export default function App() {
             </TouchableOpacity>
           )}
         </>
-      )}
-
-      {/* Placeholder for other features */}
-      {currentFeature !== 'ocr' && (
+      ) : (
+        // Placeholder for other features
         <View style={styles.placeholderContainer}>
           <Ionicons
             name={
               currentFeature === 'rephrase' ? 'create' :
                 currentFeature === 'ielts' ? 'school' :
-                  currentFeature === 'multi-query' ? 'chatbubbles' :
-                    currentFeature === 'youtube' ? 'logo-youtube' : 'apps'
+                  currentFeature === 'youtube' ? 'logo-youtube' : 'apps'
             }
             size={80}
             color="#4a90e2"
@@ -307,8 +313,7 @@ export default function App() {
           <Text style={styles.placeholderTitle}>
             {currentFeature === 'rephrase' ? 'Text Rephrasing & Correction' :
               currentFeature === 'ielts' ? 'IELTS Assistance' :
-                currentFeature === 'multi-query' ? 'Multi-Model Querying' :
-                  currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Feature'}
+                currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Feature'}
           </Text>
           <Text style={styles.placeholderText}>
             This feature is coming soon
