@@ -2,6 +2,8 @@ package practice
 
 import "fmt"
 
+var ExportVar string = "This is export variable"
+
 func VariablesPractice() {
 	var myName string = "My name is Subodh Chandra Shil"
 	fmt.Println(myName)
@@ -28,6 +30,4 @@ func VariablesPractice() {
 
 	myCountry := "Bangladesh"
 	fmt.Println("My country name is:", myCountry)
-
-	var ExportVar string = "This is export variable"
 }

@@ -12,6 +12,5 @@ func main() {
 
 	myPackage.PrintMessage("All is good")
 	practice.VariablesPractice()
-
-	practice.ExportVar
+	fmt.Println(practice.ExportVar)
 }

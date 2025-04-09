@@ -13,16 +13,93 @@ import {
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { Ionicons } from '@expo/vector-icons';
+import AuthScreen from './AuthScreen';
+import FeaturesScreen from './FeaturesScreen';
 
 export default function App() {
+  // App state management
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showAuth, setShowAuth] = useState(false);
+  const [showFeatures, setShowFeatures] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState('ocr'); // Default to OCR
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userProfile, setUserProfile] = useState(null);
 
   useEffect(() => {
+    // Simulate app initialization
     setTimeout(() => {
       setIsLoading(false);
+      setShowAuth(true); // Show auth screen after splash screen
     }, 2000);
   }, []);
+
+  // Handle Google authentication
+  const handleAuthenticate = async (type) => {
+    if (type === 'google') {
+      try {
+        // Mock a successful Google authentication
+        const mockGoogleResponse = {
+          user: {
+            id: "123456789",
+            name: "Demo User",
+            email: "demo@example.com",
+            photoUrl: "https://randomuser.me/api/portraits/men/32.jpg"
+          },
+          accessToken: "mock-access-token",
+        };
+
+        // Set user profile from auth response
+        setUserProfile(mockGoogleResponse.user);
+        setIsAuthenticated(true);
+        setShowAuth(false);
+        setShowFeatures(true); // Show features selection screen after auth
+      } catch (error) {
+        Alert.alert("Authentication Failed", "Could not sign in with Google");
+        console.error("Google auth error:", error);
+      }
+    }
+  };
+
+  // Skip authentication
+  const handleSkipAuth = () => {
+    setShowAuth(false);
+    setShowFeatures(true); // Show features selection even when skipping auth
+  };
+
+  // Handle feature selection
+  const handleSelectFeature = (featureId) => {
+    setCurrentFeature(featureId);
+    setShowFeatures(false); // Hide features screen and show the selected feature
+  };
+
+  // Navigate back to features selection
+  const handleBackToFeatures = () => {
+    setShowFeatures(true);
+  };
+
+  // Sign out function
+  const handleSignOut = () => {
+    Alert.alert(
+      "Sign Out",
+      "Are you sure you want to sign out?",
+      [
+        {
+          text: "Cancel",
+          style: "cancel"
+        },
+        {
+          text: "Sign Out",
+          onPress: () => {
+            setIsAuthenticated(false);
+            setUserProfile(null);
+            setShowAuth(true);
+            setShowFeatures(false);
+          }
+        }
+      ]
+    );
+  };
 
   // Request permissions for camera and media library
   const requestPermissions = async () => {
@@ -115,55 +192,128 @@ export default function App() {
     );
   }
 
+  // Show authentication screen
+  if (showAuth) {
+    return (
+      <AuthScreen
+        onAuthenticate={handleAuthenticate}
+        onSkip={handleSkipAuth}
+      />
+    );
+  }
 
+  // Show features selection screen
+  if (showFeatures) {
+    return (
+      <FeaturesScreen
+        onSelectFeature={handleSelectFeature}
+        userProfile={userProfile}
+      />
+    );
+  }
+
+  // Feature-specific screens
+  // Currently only implementing Image-to-Text (OCR)
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#4a90e2" />
       <View style={styles.header}>
-        <Text style={styles.headerText}>Aora</Text>
+        <TouchableOpacity style={styles.backButton} onPress={handleBackToFeatures}>
+          <Ionicons name="arrow-back" size={24} color="white" />
+        </TouchableOpacity>
+        <Text style={styles.headerText}>
+          {currentFeature === 'ocr' ? 'Image to Text' :
+            currentFeature === 'rephrase' ? 'Rephrase Text' :
+              currentFeature === 'ielts' ? 'IELTS Assistant' :
+                currentFeature === 'multi-query' ? 'Multi-Model Query' :
+                  currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Aora'}
+        </Text>
+        {isAuthenticated && userProfile && (
+          <TouchableOpacity style={styles.profileButton} onPress={handleSignOut}>
+            {userProfile.photoUrl ? (
+              <Image
+                source={{ uri: userProfile.photoUrl }}
+                style={styles.profileImage}
+              />
+            ) : (
+              <Ionicons name="person-circle" size={32} color="white" />
+            )}
+          </TouchableOpacity>
+        )}
       </View>
 
-      {images.length === 0 ? (
-        <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>No images selected</Text>
-          <Text style={styles.instructionText}>
-            Use the buttons below to take a photo or select from gallery
-          </Text>
-        </View>
-      ) : (
-        <ScrollView style={styles.imageScrollView}>
-          <View style={styles.imageGrid}>
-            {images.map((image, index) => (
-              <View key={index} style={styles.imageContainer}>
-                <Image source={{ uri: image.uri }} style={styles.image} />
-                <TouchableOpacity
-                  style={styles.removeButton}
-                  onPress={() => removeImage(index)}
-                >
-                  <Ionicons name="close-circle" size={24} color="red" />
-                </TouchableOpacity>
+      {/* Feature-specific content (currently only showing OCR) */}
+      {currentFeature === 'ocr' && (
+        <>
+          {images.length === 0 ? (
+            <View style={styles.emptyContainer}>
+              <Ionicons name="document-text" size={80} color="#ddd" style={styles.emptyIcon} />
+              <Text style={styles.emptyText}>No images selected</Text>
+              <Text style={styles.instructionText}>
+                Take a photo or select from gallery to extract text
+              </Text>
+            </View>
+          ) : (
+            <ScrollView style={styles.imageScrollView}>
+              <View style={styles.imageGrid}>
+                {images.map((image, index) => (
+                  <View key={index} style={styles.imageContainer}>
+                    <Image source={{ uri: image.uri }} style={styles.image} />
+                    <TouchableOpacity
+                      style={styles.removeButton}
+                      onPress={() => removeImage(index)}
+                    >
+                      <Ionicons name="close-circle" size={24} color="red" />
+                    </TouchableOpacity>
+                  </View>
+                ))}
               </View>
-            ))}
+            </ScrollView>
+          )}
+
+          <View style={styles.footer}>
+            <TouchableOpacity style={styles.button} onPress={takePhoto}>
+              <Ionicons name="camera" size={24} color="white" />
+              <Text style={styles.buttonText}>Camera</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button} onPress={pickImages}>
+              <Ionicons name="images" size={24} color="white" />
+              <Text style={styles.buttonText}>Gallery</Text>
+            </TouchableOpacity>
           </View>
-        </ScrollView>
+
+          {images.length > 0 && (
+            <TouchableOpacity style={styles.actionButton} onPress={generatePDF}>
+              <Text style={styles.actionButtonText}>Extract Text</Text>
+            </TouchableOpacity>
+          )}
+        </>
       )}
 
-      <View style={styles.footer}>
-        <TouchableOpacity style={styles.button} onPress={takePhoto}>
-          <Ionicons name="camera" size={24} color="white" />
-          <Text style={styles.buttonText}>Camera</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button} onPress={pickImages}>
-          <Ionicons name="images" size={24} color="white" />
-          <Text style={styles.buttonText}>Gallery</Text>
-        </TouchableOpacity>
-      </View>
-
-      {images.length > 0 && (
-        <TouchableOpacity style={styles.pdfButton} onPress={generatePDF}>
-          <Text style={styles.pdfButtonText}>AI Generated PDF</Text>
-        </TouchableOpacity>
+      {/* Placeholder for other features */}
+      {currentFeature !== 'ocr' && (
+        <View style={styles.placeholderContainer}>
+          <Ionicons
+            name={
+              currentFeature === 'rephrase' ? 'create' :
+                currentFeature === 'ielts' ? 'school' :
+                  currentFeature === 'multi-query' ? 'chatbubbles' :
+                    currentFeature === 'youtube' ? 'logo-youtube' : 'apps'
+            }
+            size={80}
+            color="#4a90e2"
+          />
+          <Text style={styles.placeholderTitle}>
+            {currentFeature === 'rephrase' ? 'Text Rephrasing & Correction' :
+              currentFeature === 'ielts' ? 'IELTS Assistance' :
+                currentFeature === 'multi-query' ? 'Multi-Model Querying' :
+                  currentFeature === 'youtube' ? 'YouTube Summarizer' : 'Feature'}
+          </Text>
+          <Text style={styles.placeholderText}>
+            This feature is coming soon
+          </Text>
+        </View>
       )}
     </View>
   );
@@ -200,19 +350,42 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#4a90e2',
     padding: 15,
-    alignItems: 'center',
     paddingTop: 50,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
   },
   headerText: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
+  },
+  backButton: {
+    position: 'absolute',
+    left: 15,
+    top: 48,
+  },
+  profileButton: {
+    position: 'absolute',
+    right: 15,
+    top: 48,
+  },
+  profileImage: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    borderWidth: 2,
+    borderColor: 'white',
   },
   emptyContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+  },
+  emptyIcon: {
+    marginBottom: 20,
   },
   emptyText: {
     fontSize: 18,
@@ -269,7 +442,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 8,
   },
-  pdfButton: {
+  actionButton: {
     backgroundColor: '#2ecc71',
     padding: 15,
     alignItems: 'center',
@@ -277,9 +450,29 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 20,
   },
-  pdfButtonText: {
+  actionButtonText: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  // Placeholder styles for unimplemented features
+  placeholderContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  placeholderTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#333',
+    marginTop: 20,
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  placeholderText: {
+    fontSize: 16,
+    color: '#777',
+    textAlign: 'center',
   },
 });
