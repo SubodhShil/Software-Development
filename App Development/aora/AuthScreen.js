@@ -21,6 +21,8 @@ const AuthScreen = ({ onAuthenticate, onSkip }) => {
                 blurRadius={3}
             >
                 <View style={styles.overlay}>
+                    {/* App name and slogan */}
+
                     <View style={styles.logoContainer}>
                         <Text style={styles.logoText}>Aora</Text>
                         <Text style={styles.tagline}>Transform your photos with AI</Text>
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
     },
     overlay: {
         flex: 1,
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: '#183B4E',
         justifyContent: 'space-between',
         padding: 20,
     },

@@ -11,6 +11,7 @@ import SplashScreen from "./components/SplashScreen";
 import AppHeader from "./components/AppHeader";
 import OCRFeature from "./components/OCRFeature";
 import FeaturePlaceholder from "./components/FeaturePlaceholder";
+import TextParaphraserScreen from "./components/TextParaphraserScreen";
 
 
 export default function App() {
@@ -124,7 +125,7 @@ export default function App() {
       case "ocr":
         return "Image to Text";
       case "rephrase":
-        return "Rephrase Text";
+        return "Text Paraphrasing";
       case "ielts":
         return "IELTS Assistant";
       case "multi-query":
@@ -185,6 +186,8 @@ export default function App() {
           setImages={setImages}
           requestPermissions={requestPermissions}
         />
+      ) : currentFeature === "rephrase" ? (
+        <TextParaphraserScreen />
       ) : (
         <FeaturePlaceholder featureId={currentFeature} />
       )}

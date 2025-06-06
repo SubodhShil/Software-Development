@@ -9,10 +9,12 @@ import {
     KeyboardAvoidingView,
     Platform,
     Image,
-    ActivityIndicator
+    ActivityIndicator,
+    Alert
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
+import Markdown from 'react-native-markdown-display';
 
 export default function MultiModalChat({ navigation, onBackToFeatures }) {
     const [messages, setMessages] = useState([
@@ -26,6 +28,7 @@ export default function MultiModalChat({ navigation, onBackToFeatures }) {
     const [inputText, setInputText] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [conversationHistory, setConversationHistory] = useState([]);
 
     const scrollViewRef = useRef();
 
@@ -34,7 +37,7 @@ export default function MultiModalChat({ navigation, onBackToFeatures }) {
         scrollViewRef.current?.scrollToEnd({ animated: true });
     }, [messages]);
 
-    const handleSendMessage = () => {
+    const handleSendMessage = async () => {
         if (inputText.trim() === '' && !selectedImage) return;
 
         // Add user message
@@ -51,22 +54,66 @@ export default function MultiModalChat({ navigation, onBackToFeatures }) {
         setSelectedImage(null);
         setIsTyping(true);
 
-        // Simulate AI response after a delay
-        setTimeout(() => {
+        try {
+            // Make API call with the correct format
+            const response = await fetch('https://langchain-grammar-check-api.onrender.com/chat/gemini/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: inputText, // This is the key change - sending just the input text
+                    conversation_history: conversationHistory
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
+            }
+
+            const data = await response.json();
+            
+            // Add AI response to messages
             const responseMessage = {
                 id: messages.length + 2,
                 role: 'assistant',
-                content: generateAIResponse(inputText, selectedImage),
+                content: data.response || "Sorry, I couldn't process that request.",
                 timestamp: new Date()
             };
 
             setMessages(prev => [...prev, responseMessage]);
+            
+            // Update conversation history with both user message and AI response
+            setConversationHistory([
+                ...conversationHistory,
+                {
+                    role: 'user',
+                    content: inputText
+                },
+                {
+                    role: 'assistant',
+                    content: data.response || "Sorry, I couldn't process that request."
+                }
+            ]);
+        } catch (error) {
+            console.error('Error calling API:', error);
+            
+            // Add error message
+            const errorMessage = {
+                id: messages.length + 2,
+                role: 'assistant',
+                content: "Sorry, I encountered an error while processing your request. Please try again later.",
+                timestamp: new Date()
+            };
+            
+            setMessages(prev => [...prev, errorMessage]);
+        } finally {
             setIsTyping(false);
-        }, 1500);
+        }
     };
 
-    // Mock AI response generation
-    const generateAIResponse = (text, image) => {
+    // Fallback response generation if API fails
+    const generateFallbackResponse = (text, image) => {
         if (image) {
             if (text.toLowerCase().includes('describe')) {
                 return "This appears to be an image containing [description would be based on actual image content]. Is there anything specific about it you'd like to know?";
@@ -130,9 +177,18 @@ export default function MultiModalChat({ navigation, onBackToFeatures }) {
                         <Image source={{ uri: message.image }} style={styles.messageImage} />
                     </View>
                 )}
-                <Text style={[styles.messageText, isUser ? styles.userMessageText : styles.assistantMessageText]}>
-                    {message.content}
-                </Text>
+                
+                {isUser ? (
+                    <Text style={[styles.messageText, styles.userMessageText]}>
+                        {message.content}
+                    </Text>
+                ) : (
+                    <Markdown 
+                        style={markdownStyles}
+                    >
+                        {message.content}
+                    </Markdown>
+                )}
             </View>
         );
     };
@@ -205,6 +261,107 @@ export default function MultiModalChat({ navigation, onBackToFeatures }) {
         </KeyboardAvoidingView>
     );
 }
+
+const markdownStyles = {
+    body: {
+        color: 'white',
+        fontSize: 16,
+        lineHeight: 22,
+    },
+    heading1: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: 'white',
+        marginVertical: 10,
+    },
+    heading2: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'white',
+        marginVertical: 8,
+    },
+    heading3: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'white',
+        marginVertical: 6,
+    },
+    paragraph: {
+        color: 'white',
+        fontSize: 16,
+        lineHeight: 22,
+        marginVertical: 4,
+    },
+    link: {
+        color: '#4a90e2',
+        textDecorationLine: 'underline',
+    },
+    list_item: {
+        color: 'white',
+        fontSize: 16,
+        lineHeight: 22,
+    },
+    bullet_list: {
+        marginVertical: 6,
+    },
+    ordered_list: {
+        marginVertical: 6,
+    },
+    blockquote: {
+        backgroundColor: '#444',
+        borderLeftWidth: 4,
+        borderLeftColor: '#777',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        marginVertical: 6,
+    },
+    code_block: {
+        backgroundColor: '#333',
+        padding: 10,
+        borderRadius: 4,
+        fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+        color: '#e6e6e6',
+    },
+    code_inline: {
+        backgroundColor: '#333',
+        fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+        color: '#e6e6e6',
+        padding: 2,
+        borderRadius: 3,
+    },
+    hr: {
+        backgroundColor: '#555',
+        height: 1,
+        marginVertical: 10,
+    },
+    image: {
+        width: '100%',
+        height: 200,
+        borderRadius: 8,
+        marginVertical: 6,
+    },
+    table: {
+        borderWidth: 1,
+        borderColor: '#555',
+        borderRadius: 4,
+        marginVertical: 8,
+    },
+    thead: {
+        backgroundColor: '#444',
+    },
+    th: {
+        padding: 6,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    td: {
+        padding: 6,
+        color: 'white',
+        borderWidth: 1,
+        borderColor: '#555',
+    },
+};
 
 const styles = StyleSheet.create({
     container: {

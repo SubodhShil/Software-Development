@@ -1,3 +1,4 @@
+// all necessary library imports and styles
 import React from "react";
 import {
     View,
@@ -12,7 +13,9 @@ const SplashScreen = () => {
         <View style={styles.splashContainer}>
             <StatusBar barStyle="light-content" backgroundColor="#4a90e2" />
             <Text style={styles.splashLogo}>Aora</Text>
+            {/* the loading icon */}
             <ActivityIndicator size="large" color="#ffffff" style={styles.loader} />
+            {/* slogan here */}
             <Text style={styles.splashTagline}>Transform your photos with AI</Text>
         </View>
     );
@@ -21,7 +24,7 @@ const SplashScreen = () => {
 const styles = StyleSheet.create({
     splashContainer: {
         flex: 1,
-        backgroundColor: "#4a90e2",
+        backgroundColor: "#183B4E",
         justifyContent: "center",
         alignItems: "center"
     },

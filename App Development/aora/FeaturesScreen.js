@@ -1,3 +1,4 @@
+// all necessary library imports and styles go here  
 import React from 'react';
 import {
     View,
@@ -33,7 +34,8 @@ const FeatureCard = ({ title, description, icon, onPress, isActive }) => (
 );
 
 const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
-    // Define all app features
+
+    // All app features are listed below
     const features = [
         {
             id: 'ocr',
@@ -44,32 +46,32 @@ const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
         },
         {
             id: 'rephrase',
-            title: 'Text Rephrasing & Correction',
+            title: 'Text Paraphrasing & Correction',
             description: 'Grammar correction and paraphrasing with Generative AI',
             icon: 'create',
-            isActive: false
+            isActive: true
         },
         {
             id: 'ielts',
             title: 'IELTS Assistance',
             description: 'Writing & Speaking help with score prediction',
             icon: 'school',
-            isActive: false
+            isActive: true
         },
         {
             id: 'multi-query',
             title: 'Multi-Model Querying',
             description: 'Get diverse AI responses to your questions',
             icon: 'chatbubbles',
-            isActive: false
+            isActive: true
         },
         {
             id: 'youtube',
             title: 'YouTube Summarizer',
             description: 'Generate text summaries from YouTube videos',
             icon: 'logo-youtube',
-            isActive: false
-        }
+            isActive: true
+        },
     ];
 
     return (
@@ -91,7 +93,8 @@ const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
                     Select a feature to get started
                 </Text>
             </View>
-
+            
+            {/* Scrollable feature list */}
             <ScrollView style={styles.featuresContainer}>
                 {features.map((feature) => (
                     <FeatureCard
@@ -184,7 +187,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     featureTitle: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         color: '#333',
         marginBottom: 4,

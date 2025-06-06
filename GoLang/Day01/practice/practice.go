@@ -10,7 +10,7 @@ func VariablesPractice() {
 
 	var num1 = 88 // it is now fixed as data type 'int'
 	fmt.Println(num1)
-
+	
 	// num1 = "changed to string" // error
 	num1 = 155
 	fmt.Println(num1)

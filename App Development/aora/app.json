@@ -6,24 +6,39 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
+      "package": "com.subodh333.aora",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.aora"
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "jsEngine": "hermes",
+    "owner": "subodh333",
+    "extra": {
+      "eas": {
+        "projectId": "aa1a9a9a-7b1f-43e4-b4d2-9efd0f91441c"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/aa1a9a9a-7b1f-43e4-b4d2-9efd0f91441c",
+      "fallbackToCacheTimeout": 0
     }
   }
 }
