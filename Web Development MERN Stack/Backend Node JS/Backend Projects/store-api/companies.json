@@ -1,0 +1,52 @@
+[
+    {
+        "_id": "507f191e810c19729de860ea",
+        "name": "Apple",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860eb",
+        "name": "IKEA",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860ec",
+        "name": "Samsung",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860ed",
+        "name": "Nike",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860ee",
+        "name": "Sony",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860ef",
+        "name": "Penguin Random House",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860f0",
+        "name": "Lego",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860f1",
+        "name": "Bosch",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860f2",
+        "name": "Adidas",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    },
+    {
+        "_id": "507f191e810c19729de860f3",
+        "name": "Dyson",
+        "createdAt": "2025-06-07T12:00:00.000Z"
+    }
+]
