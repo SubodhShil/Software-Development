@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const UserRating = require('./UserRating');
 
 const productSchema = new mongoose.Schema({
     name: {
@@ -30,7 +29,6 @@ const productSchema = new mongoose.Schema({
         validate: {
             validator: function (value) {
                 if (value === null) return true;
-                // Check if value is a number and, when rounded to 1 decimal place, is unchanged
                 return Number.isFinite(value) && Math.abs(value - Math.round(value * 10) / 10) < 0.0001;
             },
             message: 'Rating must be a valid number with up to one decimal place or null'
@@ -55,9 +53,11 @@ const productSchema = new mongoose.Schema({
         default: 'Uncategorized'
     },
     company: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Company',
-        required: [true, 'Company must be provided']
+        type: String,
+        required: [true, 'Company name must be provided'],
+        trim: true,
+        minlength: [2, 'Company name must be at least 2 characters'],
+        maxlength: [50, 'Company name cannot exceed 50 characters']
     }
 }, {
     timestamps: true,
@@ -70,36 +70,7 @@ productSchema.virtual('displayRating').get(function () {
     return this.rating === null ? 'Not Rated' : this.rating.toFixed(1);
 });
 
-// Update rating based on user ratings
-productSchema.pre('save', async function (next) {
-    if (this.isModified('rating')) {
-        return next();
-    }
-
-    const ratings = await UserRating.find({ product: this._id }).select('rating');
-    if (ratings.length > 0) {
-        const avgRating = ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length;
-        this.rating = Math.round(avgRating * 10) / 10;
-    } else {
-        this.rating = null;
-    }
-    next();
-});
-
-// Update rating after a new user rating is added
-productSchema.statics.updateProductRating = async function (productId) {
-    const ratings = await UserRating.find({ product: productId }).select('rating');
-    const product = await this.findById(productId);
-    if (ratings.length > 0) {
-        const avgRating = ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length;
-        product.rating = Math.round(avgRating * 10) / 10;
-    } else {
-        product.rating = null;
-    }
-    await product.save();
-};
-
-// Indexes for efficient querying
+// Index for efficient querying
 productSchema.index({ name: 1 });
 productSchema.index({ company: 1 });
 

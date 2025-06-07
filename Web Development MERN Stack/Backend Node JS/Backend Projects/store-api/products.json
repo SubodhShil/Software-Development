@@ -7,7 +7,7 @@
         "description": "Latest smartphone with advanced camera and A18 chip.",
         "stock": 50,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -19,7 +19,7 @@
         "description": "Lightweight laptop with M3 chip and Retina display.",
         "stock": 30,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -31,7 +31,7 @@
         "description": "Wireless earbuds with noise cancellation.",
         "stock": 100,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -43,7 +43,7 @@
         "description": "Powerful tablet with M2 chip and Apple Pencil support.",
         "stock": 25,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -55,7 +55,7 @@
         "description": "Smartwatch with advanced health tracking.",
         "stock": 40,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -67,7 +67,7 @@
         "description": "Versatile bookcase for home or office.",
         "stock": 60,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -79,7 +79,7 @@
         "description": "Modern dresser with ample storage.",
         "stock": 35,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -91,7 +91,7 @@
         "description": "Comfortable armchair with sleek design.",
         "stock": 20,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -103,7 +103,7 @@
         "description": "Modular shelving for storage and display.",
         "stock": 50,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -115,7 +115,7 @@
         "description": "Cozy sofa with removable covers.",
         "stock": 15,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -127,7 +127,7 @@
         "description": "Flagship smartphone with S Pen and 200MP camera.",
         "stock": 45,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -139,7 +139,7 @@
         "description": "Immersive 8K television with vibrant colors.",
         "stock": 10,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -151,7 +151,7 @@
         "description": "Wireless earbuds with active noise cancellation.",
         "stock": 80,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -163,7 +163,7 @@
         "description": "High-performance tablet with AMOLED display.",
         "stock": 25,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -175,7 +175,7 @@
         "description": "Smart fridge with Family Hub touchscreen.",
         "stock": 5,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -187,7 +187,7 @@
         "description": "Stylish sneakers with Air cushioning.",
         "stock": 60,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -199,7 +199,7 @@
         "description": "Breathable athletic shirt for workouts.",
         "stock": 100,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -211,7 +211,7 @@
         "description": "Running shoes with enhanced stability.",
         "stock": 50,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -223,7 +223,7 @@
         "description": "Cozy hoodie for casual wear.",
         "stock": 75,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -235,7 +235,7 @@
         "description": "Compression tights for athletic performance.",
         "stock": 80,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -247,7 +247,7 @@
         "description": "Next-gen gaming console with enhanced graphics.",
         "stock": 20,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -259,7 +259,7 @@
         "description": "Premium noise-canceling headphones.",
         "stock": 30,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -271,7 +271,7 @@
         "description": "4K OLED TV with immersive sound.",
         "stock": 15,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -283,7 +283,7 @@
         "description": "Full-frame mirrorless camera for professionals.",
         "stock": 10,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -295,7 +295,7 @@
         "description": "Wireless earbuds with superior sound quality.",
         "stock": 40,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -307,7 +307,7 @@
         "description": "Bestselling book on human history.",
         "stock": 100,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -319,7 +319,7 @@
         "description": "Classic fantasy novel.",
         "stock": 80,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -331,7 +331,7 @@
         "description": "Dystopian novel exploring surveillance.",
         "stock": 90,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -343,7 +343,7 @@
         "description": "Memoir by the former First Lady.",
         "stock": 60,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -355,7 +355,7 @@
         "description": "Inspirational novel about following dreams.",
         "stock": 70,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -367,7 +367,7 @@
         "description": "Iconic Star Wars LEGO set with 7541 pieces.",
         "stock": 10,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -379,7 +379,7 @@
         "description": "Detailed LEGO set of Hogwarts Castle.",
         "stock": 15,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -391,7 +391,7 @@
         "description": "Interactive fire station playset.",
         "stock": 50,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -403,7 +403,7 @@
         "description": "Detailed replica of the Bugatti Chiron.",
         "stock": 20,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -415,7 +415,7 @@
         "description": "Versatile brick set for creative building.",
         "stock": 100,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -427,7 +427,7 @@
         "description": "Quiet and efficient dishwasher.",
         "stock": 25,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -439,7 +439,7 @@
         "description": "Energy-efficient front-load washer.",
         "stock": 20,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -451,7 +451,7 @@
         "description": "Powerful cordless drill for DIY projects.",
         "stock": 60,
         "category": "Tools",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -463,7 +463,7 @@
         "description": "High-performance blender for smoothies.",
         "stock": 40,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -475,7 +475,7 @@
         "description": "Programmable coffee maker with sleek design.",
         "stock": 30,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -487,7 +487,7 @@
         "description": "High-performance running shoes.",
         "stock": 50,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -499,7 +499,7 @@
         "description": "Comfortable tracksuit for casual wear.",
         "stock": 70,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -511,7 +511,7 @@
         "description": "Official match ball for soccer.",
         "stock": 100,
         "category": "Sports",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -523,7 +523,7 @@
         "description": "Spacious bag for gym essentials.",
         "stock": 60,
         "category": "Sports",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -535,7 +535,7 @@
         "description": "Lightweight shorts for running.",
         "stock": 80,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -547,7 +547,7 @@
         "description": "Cordless vacuum with laser dust detection.",
         "stock": 20,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -559,7 +559,7 @@
         "description": "Multi-styler for hair curling and drying.",
         "stock": 15,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -571,7 +571,7 @@
         "description": "High-speed hair dryer with heat control.",
         "stock": 25,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -583,7 +583,7 @@
         "description": "Air purifier and fan combo.",
         "stock": 30,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -595,7 +595,7 @@
         "description": "Hygienic humidifier for healthy air.",
         "stock": 20,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -607,7 +607,7 @@
         "description": "Compact smart speaker with Siri.",
         "stock": 50,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -619,7 +619,7 @@
         "description": "Streaming device with 4K HDR.",
         "stock": 40,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -631,7 +631,7 @@
         "description": "Classic wooden bed frame.",
         "stock": 25,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -643,7 +643,7 @@
         "description": "Minimalist coffee table for small spaces.",
         "stock": 60,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -655,7 +655,7 @@
         "description": "Smartwatch with advanced fitness tracking.",
         "stock": 30,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -667,7 +667,7 @@
         "description": "Immersive soundbar with Dolby Atmos.",
         "stock": 20,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -679,7 +679,7 @@
         "description": "Elite running shoes for marathons.",
         "stock": 40,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -691,7 +691,7 @@
         "description": "Non-slip yoga mat for workouts.",
         "stock": 70,
         "category": "Sports",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -703,7 +703,7 @@
         "description": "Next-gen virtual reality headset.",
         "stock": 15,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -715,7 +715,7 @@
         "description": "Portable speaker with deep bass.",
         "stock": 50,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -727,7 +727,7 @@
         "description": "Science fiction classic.",
         "stock": 80,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -739,7 +739,7 @@
         "description": "Memoir about self-discovery through education.",
         "stock": 60,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -751,7 +751,7 @@
         "description": "Functional roller coaster LEGO set.",
         "stock": 10,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -763,7 +763,7 @@
         "description": "Interactive dragon playset for kids.",
         "stock": 40,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -775,7 +775,7 @@
         "description": "Compact microwave for quick meals.",
         "stock": 30,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -787,7 +787,7 @@
         "description": "Stainless steel toaster with multiple settings.",
         "stock": 50,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -799,7 +799,7 @@
         "description": "Casual sneakers with Boost cushioning.",
         "stock": 60,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -811,7 +811,7 @@
         "description": "Lightweight jacket for outdoor activities.",
         "stock": 70,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -823,7 +823,7 @@
         "description": "Smart desk lamp with adaptive lighting.",
         "stock": 20,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -835,7 +835,7 @@
         "description": "Heater and fan with precise temperature control.",
         "stock": 15,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -847,7 +847,7 @@
         "description": "Wireless keyboard for Mac and iPad.",
         "stock": 40,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ea",
+        "company": "Apple",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -859,7 +859,7 @@
         "description": "Versatile utility cart for storage.",
         "stock": 50,
         "category": "Furniture",
-        "company": "507f191e810c19729de860eb",
+        "company": "IKEA",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -871,7 +871,7 @@
         "description": "Curved gaming monitor with 240Hz refresh rate.",
         "stock": 10,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ec",
+        "company": "Samsung",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -883,7 +883,7 @@
         "description": "Classic sneakers with timeless design.",
         "stock": 80,
         "category": "Clothing",
-        "company": "507f191e810c19729de860ed",
+        "company": "Nike",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -895,7 +895,7 @@
         "description": "4K OLED TV with cognitive processor.",
         "stock": 15,
         "category": "Electronics",
-        "company": "507f191e810c19729de860ee",
+        "company": "Sony",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -907,7 +907,7 @@
         "description": "Guide to building effective habits.",
         "stock": 70,
         "category": "Books",
-        "company": "507f191e810c19729de860ef",
+        "company": "Penguin Random House",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -919,7 +919,7 @@
         "description": "Detailed X-Wing fighter LEGO set.",
         "stock": 20,
         "category": "Toys",
-        "company": "507f191e810c19729de860f0",
+        "company": "Lego",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -931,7 +931,7 @@
         "description": "Fast-boiling electric kettle.",
         "stock": 40,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f1",
+        "company": "Bosch",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -943,7 +943,7 @@
         "description": "Iconic sneakers with minimalist design.",
         "stock": 60,
         "category": "Clothing",
-        "company": "507f191e810c19729de860f2",
+        "company": "Adidas",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     },
@@ -955,7 +955,7 @@
         "description": "Cordless hair straightener with flexing plates.",
         "stock": 15,
         "category": "Home Appliances",
-        "company": "507f191e810c19729de860f3",
+        "company": "Dyson",
         "createdAt": "2025-06-07T12:00:00.000Z",
         "updatedAt": "2025-06-07T12:00:00.000Z"
     }
