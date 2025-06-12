@@ -20,7 +20,7 @@ const getAllProducts = async (req, res) => {
     if (company) {
         queryObject.company = company;
     }
-
+    
     // console.log(queryObject);
     const products = await Product.find(queryObject);
     res.status(200).json({ products, nbHits: products.length });
