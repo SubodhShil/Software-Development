@@ -17,6 +17,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
+from youtube_transcript_api import YouTubeTranscriptApi
 
 # Load environment variables
 load_dotenv()
@@ -108,7 +109,31 @@ class PDFGenerateRequest(BaseModel):
     title: str = "Aora Generated Document"
     include_original_images: bool = False
 
+class SummarizeRequest(BaseModel):
+    video_url: str
+
 # Endpoints
+
+@app.post("/summarize")
+async def summarize_video(
+    request: SummarizeRequest,
+    text_model: GoogleGenerativeAI = Depends(get_gemini_text_model)
+):
+    try:
+        video_id = request.video_url.split("v=")[-1]
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+        transcript = " ".join([d['text'] for d in transcript_list])
+
+        prompt_template = "Summarize the following text:\n\n{text}\n\nSummary:"
+        prompt = PromptTemplate(template=prompt_template, input_variables=["text"])
+        chain = LLMChain(llm=text_model, prompt=prompt)
+
+        summary = chain.run(text=transcript)
+
+        return {"summary": summary}
+    except Exception as e:
+        logger.error(f"Error summarizing video: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/upload-images/", response_model=ImageProcessResponse)

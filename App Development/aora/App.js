@@ -10,8 +10,9 @@ import MultiModalChat from "./MultiModalChat";
 import SplashScreen from "./components/SplashScreen";
 import AppHeader from "./components/AppHeader";
 import OCRFeature from "./components/OCRFeature";
-import FeaturePlaceholder from "./components/FeaturePlaceholder";
+import GrammarChecker from "./components/GrammarChecker";
 import TextParaphraserScreen from "./components/TextParaphraserScreen";
+import YoutubeSummarizer from './components/YoutubeSummarizer';
 
 
 export default function App() {
@@ -126,8 +127,8 @@ export default function App() {
         return "Image to Text";
       case "rephrase":
         return "Text Paraphrasing";
-      case "ielts":
-        return "IELTS Assistant";
+      case "grammar":
+        return "Grammar Checker";
       case "multi-query":
         return "Multi-Model Query";
       case "youtube":
@@ -188,8 +189,10 @@ export default function App() {
         />
       ) : currentFeature === "rephrase" ? (
         <TextParaphraserScreen />
+      ) : currentFeature === 'youtube' ? (
+        <YoutubeSummarizer />
       ) : (
-        <FeaturePlaceholder featureId={currentFeature} />
+        <GrammarChecker />
       )}
     </View>
   );
