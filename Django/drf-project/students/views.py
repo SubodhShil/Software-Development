@@ -1,10 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .models import Student
 
-
-def students(request):
-    students = [
-        {'id': 1, 'name': 'John Doe', 'age': 25}
-    ]
-
-    return HttpResponse(students)
+def studentsView(request):
+    students = Student.objects.all()
+    students_list = list(students.values())
+    return JsonResponse(students_list)
